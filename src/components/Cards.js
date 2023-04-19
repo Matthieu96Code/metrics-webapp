@@ -9,16 +9,19 @@ const Cards = ({ code, description }) => {
   const navigate = useNavigate();
 
   return (
-    <button
-      type="button"
-      onClick={() => {
-        navigate('page');
-        dispatch(selectCurrency(code));
-      }}
-    >
-      <div>{code}</div>
-      <div>{description}</div>
-    </button>
+    <li className="element-card">
+      <button
+        className="card-btn"
+        type="button"
+        onClick={() => {
+          navigate('page');
+          dispatch(selectCurrency(code));
+        }}
+      >
+        <h3>{code}</h3>
+        <p>{description}</p>
+      </button>
+    </li>
   );
 };
 

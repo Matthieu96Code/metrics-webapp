@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getItems());
-  }, []);
+  }, [dispatch]);
 
   const handleChange = (event) => {
     dispatch(filter(event.target.value));
@@ -17,28 +17,28 @@ const Home = () => {
 
   if (field) {
     return (
-      <div>
-        <form>
+      <div className="main-container">
+        <form className="research-form">
           <input type="text" onChange={(event) => handleChange(event)} />
         </form>
-        <div>
+        <ul className="cards-list">
           {filtered.map((item) => (
             <Cards key={item.id} code={item.code} description={item.description} />
           ))}
-        </div>
+        </ul>
       </div>
     );
   }
   return (
-    <div>
-      <form>
+    <div className="main-container">
+      <form className="research-form">
         <input type="text" onChange={(event) => handleChange(event)} />
       </form>
-      <div>
+      <ul className="cards-list">
         {items.map((item) => (
           <Cards key={item.id} code={item.code} description={item.description} />
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
