@@ -35,7 +35,9 @@ const initialState = {
   items: [],
   details: [],
   selected: [],
+  filtered: [],
   isLoading: true,
+  field: false,
 };
 
 const itemsSlice = createSlice({
@@ -45,6 +47,13 @@ const itemsSlice = createSlice({
     selectCurrency: (state, action) => ({
       ...state,
       selected: action.payload,
+    }),
+    filter: (state, action) => ({
+      ...state,
+      field: true,
+      filtered: state.items.filter((item) => item.code.toLowerCase()
+        .includes(action.payload.toLowerCase()) || item.description.toLowerCase()
+        .includes(action.payload.toLowerCase())),
     }),
   },
   extraReducers: (builder) => {
@@ -82,5 +91,5 @@ const itemsSlice = createSlice({
       });
   },
 });
-export const { selectCurrency } = itemsSlice.actions;
+export const { selectCurrency, filter } = itemsSlice.actions;
 export default itemsSlice.reducer;
