@@ -23,8 +23,8 @@ describe('Page', () => {
   });
 
   test('renders the details page', () => {
-    expect(screen.getByText(/detail/i)).toBeInTheDocument();
-    expect(screen.getByText(/times serie of symbol/i)).toBeInTheDocument();
+    expect(screen.getByText(/time series data/i)).toBeInTheDocument();
+    expect(screen.getByText(/currency in Euro from/i)).toBeInTheDocument();
     expect(screen.getByRole('table')).toBeInTheDocument();
   });
 

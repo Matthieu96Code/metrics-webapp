@@ -38,7 +38,7 @@ const Home = () => {
       <MainHeader />
       <div className="filter-section">
         <form className="research-form">
-          <input type="text" onChange={(event) => handleChange(event)} placeholder="search by symbol name | code" />
+          <input type="text" onChange={(event) => handleChange(event)} placeholder="search by currency code | name" />
         </form>
       </div>
       <ul className="cards-list">

@@ -16,7 +16,7 @@ const Cards = ({ code, description }) => {
         type="button"
         onClick={() => {
           navigate(`${code}`);
-          dispatch(selectCurrency(code, description));
+          dispatch(selectCurrency(code));
         }}
       >
         <BsArrowRightCircle className="arrow-next" size="20px" color="white" />

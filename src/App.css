@@ -2,15 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Roboto+Slab&display=swap');
 
 :root {
-  --pink-one: #ea4f8b;
-  --pink-two: #dd4a83;
-  --pink-three: #e74e89;
-  --pink-four: #af3b68;
+  --blue-one: #4f9fea;
+  --blue-two: #4a96dd;
+  --blue-three: #4e9de7;
+  --blue-four: #3b71af;
 }
-
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Slab', serif; */
 
 /* General */
 
@@ -31,7 +27,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--pink-four);
+  background-color: var(--blue-four);
   min-height: 100vh;
 }
 
@@ -45,7 +41,7 @@ li {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   padding: 6px;
-  background-color: var(--pink-one);
+  background-color: var(--blue-four);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -82,7 +78,7 @@ li {
 /* Form */
 
 .filter-section {
-  background-color: var(--pink-two);
+  background-color: var(--blue-two);
   width: 100%;
   display: flex;
   align-items: center;
@@ -115,8 +111,6 @@ li {
   margin: auto;
   width: 50%;
   height: 180px;
-
-  /* text-align: center; */
 }
 
 .card-btn {
@@ -126,9 +120,9 @@ li {
   width: 100%;
   height: 100%;
   border: none;
-  background-image: radial-gradient(circle, var(--pink-one), var(--pink-four), var(--pink-four));
+  background-image: radial-gradient(circle, var(--blue-one), var(--blue-four), var(--blue-four));
   text-align: right;
-
+  cursor: pointer;
 }
 
 .card-btn h3 {
@@ -143,13 +137,14 @@ li {
 /* Detail */
 
 .informations {
-  background-color: var(--pink-four);
+  background-color: var(--blue-four);
   height: 100vh;
 }
 
 .informations .back-btn {
   border: none;
-  background-color: var(--pink-one);
+  background-color: var(--blue-four);
+  cursor: pointer;
 }
 
 .description {
@@ -167,16 +162,20 @@ table {
 table td,
 table th {
   color: white;
-  border: 1px solid var(--pink-one);
+  border: 1px solid var(--blue-one);
   padding: 8px;
 }
 
+table thead th {
+  background-color: var(--blue-four);
+}
+
 table tr:nth-child(even) {
-  background-color: #c94174;
+  background-color: var(--blue-four);
 }
 
 table tr:nth-child(odd) {
-  background-color: var(--pink-three);
+  background-color: var(--blue-three);
 }
 
 .detailed {

@@ -13,11 +13,10 @@ const MainHeader = () => (
           <p>2023</p>
         </div>
  )}
-      title="devise"
+      title="currency code / name"
     />
     <div className="main-picture">
-      <h1>Wordwide symbols</h1>
-      {/* <img src={img1} alt="devise and symbol logo" /> */}
+      <h1>Wordwide currencies</h1>
     </div>
   </header>
 );

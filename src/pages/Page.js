@@ -26,18 +26,18 @@ const Page = () => {
             <AiOutlineLeft color="white" />
           </button>
 )}
-        title="detail"
+        title="time series data"
       />
       <div className="detailed">
         <h1>{selected}</h1>
       </div>
       <div className="description">
         <p>
-          Times serie of symbol
+          Time series of
           {' '}
           {selected}
           {' '}
-          again Euro from Monday 16th April 2023 to Thursday 20th April 2023
+          currency in Euro from Monday 16th April 2023 to Thursday 20th April 2023
         </p>
       </div>
       <table>
