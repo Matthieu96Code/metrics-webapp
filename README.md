@@ -50,9 +50,8 @@
 ### Key Features <a name="key-features"></a>
 
 - **Use of rooter to display pages**
-- **Fetch Data from api**
-- **Allow user to  to search currencies**
-- **Add style**
+- **Display data from [exchangerate api](https://exchangerate.host/#/)**
+- **Allow user to to search by currencies name or code**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,6 +135,7 @@ To run the project, execute the following command
 
 
 - [ ] **More responsiveness**
+- [ ] **More style**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

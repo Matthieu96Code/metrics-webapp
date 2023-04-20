@@ -1,18 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// const url = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=d8d88b5eba9d5ff44de602d5c825e6f0';
 const itemsUrl = 'https://api.exchangerate.host/symbols';
 const detailsUrl = 'https://api.exchangerate.host/timeseries?start_date=2023-04-16&end_date=2023-04-20';
-// const url = 'https://coronavirus.m.pipedream.net/';
-
-// export const getItems = createAsyncThunk('items/getItems', async (thunkAPI) => {
-//   try {
-//     const resp = await fetch(url);
-//     return resp.json();
-//   } catch (error) {
-//     return thunkAPI.rejectWithValue('Thunk Error');
-//   }
-// });
 
 export const getItems = createAsyncThunk('items/getItems', async () => {
   const response = await fetch(itemsUrl, {
@@ -24,7 +13,6 @@ export const getItems = createAsyncThunk('items/getItems', async () => {
 
 export const getDetails = createAsyncThunk('details/getDetails', async () => {
   const response = await fetch(detailsUrl, {
-  // const response = await fetch(`${detailsUrl}&symbols=${}`, {
     method: 'GET',
   });
 
@@ -54,6 +42,11 @@ const itemsSlice = createSlice({
       filtered: state.items.filter((item) => item.code.toLowerCase()
         .includes(action.payload.toLowerCase()) || item.description.toLowerCase()
         .includes(action.payload.toLowerCase())),
+    }),
+    clearField: (state) => ({
+      ...state,
+      field: false,
+      filtered: state.items,
     }),
   },
   extraReducers: (builder) => {
@@ -91,5 +84,5 @@ const itemsSlice = createSlice({
       });
   },
 });
-export const { selectCurrency, filter } = itemsSlice.actions;
+export const { selectCurrency, filter, clearField } = itemsSlice.actions;
 export default itemsSlice.reducer;

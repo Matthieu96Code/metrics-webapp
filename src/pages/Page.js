@@ -2,13 +2,12 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
-import { getDetails } from '../redux/ItemSlice';
+import { getDetails, clearField } from '../redux/ItemSlice';
 import Details from '../components/Details';
 import Navbar from '../components/Navbar';
 
 const Page = () => {
-  const { details } = useSelector((state) => state.items);
-  const { selected } = useSelector((state) => state.items);
+  const { details, selected } = useSelector((state) => state.items);
 
   const navigate = useNavigate();
 
@@ -22,7 +21,14 @@ const Page = () => {
     <div className="informations">
       <Navbar
         action={(
-          <button className="back-btn" type="button" onClick={() => navigate(-1)}>
+          <button
+            className="back-btn"
+            type="button"
+            onClick={() => {
+              navigate(-1);
+              dispatch(clearField());
+            }}
+          >
             <AiOutlineLeft color="white" />
           </button>
 )}

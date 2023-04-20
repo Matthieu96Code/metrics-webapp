@@ -189,3 +189,9 @@ table tr:nth-child(odd) {
 .detailed h1 {
   color: lemonchiffon;
 }
+
+@media all and (min-width: 900px) {
+  .element-card {
+    width: 33.33%;
+  }
+}

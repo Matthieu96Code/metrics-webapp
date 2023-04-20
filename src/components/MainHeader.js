@@ -13,7 +13,7 @@ const MainHeader = () => (
           <p>2023</p>
         </div>
  )}
-      title="currency code / name"
+      title="currencies code / name"
     />
     <div className="main-picture">
       <h1>Wordwide currencies</h1>
