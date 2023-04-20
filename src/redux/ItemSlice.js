@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // const url = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=d8d88b5eba9d5ff44de602d5c825e6f0';
 const itemsUrl = 'https://api.exchangerate.host/symbols';
-const detailsUrl = 'https://api.exchangerate.host/timeseries?start_date=2023-04-01&end_date=2023-04-18';
+const detailsUrl = 'https://api.exchangerate.host/timeseries?start_date=2023-04-16&end_date=2023-04-20';
 // const url = 'https://coronavirus.m.pipedream.net/';
 
 // export const getItems = createAsyncThunk('items/getItems', async (thunkAPI) => {
