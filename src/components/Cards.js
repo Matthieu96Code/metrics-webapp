@@ -15,7 +15,7 @@ const Cards = ({ code, description }) => {
         className="card-btn"
         type="button"
         onClick={() => {
-          navigate('page');
+          navigate(`${code}`);
           dispatch(selectCurrency(code, description));
         }}
       >
