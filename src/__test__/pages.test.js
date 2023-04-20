@@ -6,7 +6,7 @@ import {
 import { Provider } from 'react-redux';
 import { createMemoryHistory } from 'history';
 import { BrowserRouter } from 'react-router-dom';
-import Page from '../Pages/Page';
+import Page from '../pages/Page';
 import store from '../store';
 
 describe('Page', () => {
