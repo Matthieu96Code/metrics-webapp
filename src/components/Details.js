@@ -15,7 +15,8 @@ const Details = ({ date, currency }) => {
 
 Details.propTypes = {
   date: PropTypes.string.isRequired,
-  currency: PropTypes.number.isRequired,
+  currency: PropTypes.shape({
+  }).isRequired,
 };
 
 export default Details;

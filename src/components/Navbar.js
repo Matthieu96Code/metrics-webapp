@@ -15,7 +15,8 @@ const Navbar = ({ action, title }) => (
 );
 
 Navbar.propTypes = {
-  action: PropTypes.string.isRequired,
+  action: PropTypes.shape({
+  }).isRequired,
   title: PropTypes.string.isRequired,
 };
 

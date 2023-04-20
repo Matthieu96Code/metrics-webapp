@@ -41,13 +41,17 @@ const Page = () => {
         </p>
       </div>
       <table>
-        <tr>
-          <th>date</th>
-          <th>price</th>
-        </tr>
-        {details.map((detail) => (
-          <Details key={detail.key} date={detail.key} currency={detail} />
-        ))}
+        <thead>
+          <tr>
+            <th>date</th>
+            <th>price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {details.map((detail) => (
+            <Details key={detail.key} date={detail.key} currency={detail} />
+          ))}
+        </tbody>
       </table>
     </div>
   );
