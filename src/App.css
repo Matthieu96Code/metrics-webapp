@@ -1,6 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Roboto+Slab&display=swap');
 
+:root {
+  --pink-one: #ea4f8b;
+  --pink-two: #dd4a83;
+  --pink-three: #e74e89;
+  --pink-four: #af3b68;
+}
+
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif; */
@@ -20,37 +27,166 @@ li {
   background-color: beige;
 }
 
-/* card style */
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--pink-four);
+  min-height: 100vh;
 }
+
+/* header */
+
+.header {
+  width: 100%;
+}
+
+.navbar {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 6px;
+  background-color: var(--pink-one);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.navbar h2 {
+  font-weight: lighter;
+}
+
+.back-from-home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar .nav-icons {
+  margin-right: 3vw;
+}
+
+.main-picture {
+  color: yellow;
+  padding: 100px 2%;
+  font-size: 24px;
+  text-align: end;
+  background-image: url(./img/img1.jpg);
+}
+
+.main-picture img {
+  width: 100%;
+}
+
+/* Form */
+
+.filter-section {
+  background-color: var(--pink-two);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.research-form {
+  width: 50%;
+  justify-self: flex-start;
+  margin: 6px 24px;
+}
+
+.research-form input {
+  padding-left: 12px;
+  width: 60%;
+  height: 25px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* card style */
 
 .cards-list {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
 }
-
-/* .cards-list {
-  display: grid;
-  grid-template-columns: auto auto;
-} */
 
 .element-card {
   margin: auto;
-  margin-bottom: 6px;
-  width: 200px;
-  height: 100px;
-  text-align: center;
+  width: 50%;
+  height: 180px;
+
+  /* text-align: center; */
 }
 
 .card-btn {
+  color: white;
   font-size: large;
-  padding: 12px;
+  padding: 5%;
   width: 100%;
   height: 100%;
   border: none;
-  background-color: beige;
+  background-image: radial-gradient(circle, var(--pink-one), var(--pink-four), var(--pink-four));
+  text-align: right;
+
+}
+
+.card-btn h3 {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: bolder;
+  margin: 15px;
+  color: yellow;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Detail */
+
+.informations {
+  background-color: var(--pink-four);
+  height: 100vh;
+}
+
+.informations .back-btn {
+  border: none;
+  background-color: var(--pink-one);
+}
+
+.description {
+  text-align: center;
+  color: white;
+  padding: 12px;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  color: white;
+  border: 1px solid var(--pink-one);
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #c94174;
+}
+
+table tr:nth-child(odd) {
+  background-color: var(--pink-three);
+}
+
+.detailed {
+  font-family: 'Roboto Slab', sans-serif;
+  background-image: url(./img/img2.jpg);
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.detailed h1 {
+  color: lemonchiffon;
 }
