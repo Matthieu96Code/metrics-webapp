@@ -6,10 +6,10 @@ const Details = ({ date, currency }) => {
   const { selected } = useSelector((state) => state.items);
 
   return (
-    <table>
-      <div>{date}</div>
-      <div>{currency[selected]}</div>
-    </table>
+    <tr>
+      <th>{date}</th>
+      <th>{currency[selected]}</th>
+    </tr>
   );
 };
 
