@@ -1,22 +1,16 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const Details = ({ date, currency }) => {
-  const { selected } = useSelector((state) => state.items);
-
-  return (
-    <tr>
-      <th>{date}</th>
-      <th>{currency[selected]}</th>
-    </tr>
-  );
-};
+const Details = ({ date, currency }) => (
+  <tr>
+    <th>{date}</th>
+    <th>{currency}</th>
+  </tr>
+);
 
 Details.propTypes = {
   date: PropTypes.string.isRequired,
-  currency: PropTypes.shape({
-  }).isRequired,
+  currency: PropTypes.number.isRequired,
 };
 
 export default Details;
