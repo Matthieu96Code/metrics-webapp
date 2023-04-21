@@ -72,7 +72,6 @@ const itemsSlice = createSlice({
       .addCase(getDetails.fulfilled, (state, action) => {
         const detail = action.payload.rates;
         const detailList = [];
-        // let idDKey = 0;
         Object.keys(detail).forEach((key) => {
           detailList.push({ key, ...detail[key] });
         });
