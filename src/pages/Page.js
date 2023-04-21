@@ -17,6 +17,15 @@ const Page = () => {
     dispatch(getDetails());
   }, [dispatch]);
 
+  let select = '';
+
+  if (selected[0] !== undefined) {
+    localStorage.setItem('select', JSON.stringify(selected));
+    select = selected;
+  } else {
+    select = JSON.parse(localStorage.getItem('select'));
+  }
+
   return (
     <div className="informations">
       <Navbar
@@ -35,13 +44,13 @@ const Page = () => {
         title="time series data"
       />
       <div className="detailed">
-        <h1>{selected}</h1>
+        <h1>{select}</h1>
       </div>
       <div className="description">
         <p>
           Time series of
           {' '}
-          {selected}
+          {select}
           {' '}
           currency in Euro from Monday 16th April 2023 to Thursday 20th April 2023
         </p>
@@ -55,7 +64,7 @@ const Page = () => {
         </thead>
         <tbody>
           {details.map((detail) => (
-            <Details key={detail.key} date={detail.key} currency={detail} />
+            <Details key={detail.key} date={detail.key} currency={detail[select]} />
           ))}
         </tbody>
       </table>
